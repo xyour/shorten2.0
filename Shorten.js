@@ -6,8 +6,7 @@ var Shorten = Backbone.Model.extend({
 		originalURL: '',
 		count: 0,
 		id: '',
-		//staticURL: 'http://kurto.r42.in/'
-		staticURL: 'api.julio.r42.in/list'
+		staticURL: 'http://kurto.r42.in/'
 	},
 
 	initialize: function(){
