@@ -1,0 +1,9 @@
+#combo1-container, #combo2-container {
+  height: 260px;
+  border: 1px solid black;
+}
+
+img {
+  height: 200px;
+  margin-top: 20px;
+}

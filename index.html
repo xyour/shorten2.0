@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>URL Shortening</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="hey look ma! I'm on a tree!">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title"><a href="index.html">Encurtador</a></h3>
+				</div>
+				<div class="panel-body">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Create a new shortened url</h3>
+						</div>
+						<div class="panel-body" id="conteudo">
+							<div class="input-group">
+						    	<input type="text" class="form-control" id="urlToSend">
+						    	<span class="input-group-btn">
+						        	<button class="btn btn-default" type="button" onClick="sendURL()">Shorten!</button>
+						    	</span>
+						    </div><!-- /input-group -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/template" id="listaURLs">
+			<tr>
+				<td><%= shortURL %></td>
+				<td><%= originalURL %></td>
+			</tr>
+		</script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+  		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+  		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+		<script type="text/javascript" src="Shorten.js"></script>
+		<script type="text/javascript" src="ShortenView.js"></script>
+		<script type="text/javascript" src="ShortenCollection.js"></script>
+		<script type="text/javascript" src="ShortenViewCollection.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
