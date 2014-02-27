@@ -11,7 +11,7 @@ function sendURL(){
 	urlToSend = 'http://' + $('#urlToSend').val();
 
 	$.ajax({
-		url: 'http://kurto.r42.in/',
+		url: 'http://api.alfredo.r42.in/',
 		type: 'POST',
 		data: { url: urlToSend },
 		success: function(res) { 
