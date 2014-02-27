@@ -27,7 +27,8 @@ var bodyTabelaURL = null;
 
 function getListURLs(){
 	
-	$.ajax({url: 'http://kurto.r42.in/recent', success: function(recent) { 
+	//$.ajax({url: 'http://kurto.r42.in/recent', success: function(recent) { 
+	$.ajax({url: 'http://api.alfredo.r42.in', success: function(recent) { 
 		var shorten;
 		var shortenView;
 
