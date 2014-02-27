@@ -29,7 +29,14 @@ var ShortenView = Backbone.View.extend({
 			elCount.addClass('badge');
 			col1.append(elCount);
 		}
-		link2.attr("href", this.model.get('originalURL'));
+		var aux = this.model.get('originalURL').indexOf("http:");
+		if (aux == -1){
+			link2.attr("href", "http://" + this.model.get('originalURL'));			
+		}
+		else{
+			link2.attr("href", this.model.get('originalURL'));
+		}
+
 		link2.attr("target", "_blank");
 		link2.html(this.model.get('originalURL'));
 		col2.append(link2);
