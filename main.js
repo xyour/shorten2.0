@@ -8,11 +8,10 @@ function sendURL(){
 	if ($('#urlToSend').val() == '')
 		return;
 
-	urlToSend = 'http://' + $('#urlToSend').val();
+	urlToSend = $('#urlToSend').val();
 
 	$.ajax({
-		//url: 'http://kurto.r42.in/',
-		url: 'api.julio.r42.in/list',
+		url: 'http://api.julio.r42.in/',
 		type: 'POST',
 		data: { url: urlToSend },
 		success: function(res) { 
@@ -28,7 +27,8 @@ var bodyTabelaURL = null;
 
 function getListURLs(){
 	
-	$.ajax({url: 'http://kurto.r42.in/recent', success: function(recent) { 
+	//$.ajax({url: 'http://kurto.r42.in/recent', success: function(recent) { 
+	$.ajax({url: 'http://api.julio.r42.in', success: function(recent) { 
 		var shorten;
 		var shortenView;
 
@@ -56,6 +56,12 @@ function getListURLs(){
 	} 
 	})
 }
+
+var socket = io.connect('http://api.julio.r42.in');
+  socket.on('news', function (data) {
+    console.log(data);
+    socket.emit('my other event', { my: 'data' });
+  });
 
 getListURLs();
 // Actualizar lista a cada 30 segundos
